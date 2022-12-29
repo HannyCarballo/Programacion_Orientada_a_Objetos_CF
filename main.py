@@ -1,6 +1,8 @@
 # Creando una clase
 class User:
     nombre = "Uriel"
+    def saludar():
+        
 
 uriel = User()
 cody = User()
