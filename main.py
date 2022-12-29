@@ -1,8 +1,8 @@
 # Creando una clase
 class User:
     nombre = "Uriel"
-    def saludar(self):
-        print("Hola, mi nombre es "+self.nombre)
+    def saludar(self, saludo):
+        print(saludo+self.nombre)
 
 uriel = User()
-uriel.saludar()
+uriel.saludar("Aloha! Mi nombre es: ")
