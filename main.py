@@ -1,12 +1,12 @@
 # Creando una clase
 class User:
-    nombre = "Uriel"
 
-    def __init__(self):
+    def __init__(self, nombre):
         # Método constructor
-
+        self.nombre=nombre
+        
     def saludar(self, saludo):
         print(saludo+self.nombre)
 
-uriel = User()
+uriel = User("Marcos")
 uriel.saludar("Aloha! Mi nombre es: ")
