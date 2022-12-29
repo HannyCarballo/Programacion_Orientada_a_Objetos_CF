@@ -1,5 +1,5 @@
 # Creando una clase
-class Curso:
+class User:
     pass # Cuerpo de la clase que por el momento está vacío
 
 # Instancias 
