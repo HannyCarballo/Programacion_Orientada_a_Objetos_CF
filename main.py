@@ -6,9 +6,3 @@ class User:
 
 uriel = User()
 uriel.saludar()
-
-cody = User()
-cody.nombre = "Cody"
-
-print(uriel.nombre)
-print(cody.nombre)
