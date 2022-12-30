@@ -20,7 +20,3 @@ class Empleado(User):
     def saludar(self):
         super().saludar("Hola!")
         print("Mi nombre es "+self._nombre+" y gano: "+str(self.salario))
-
-empleado = Empleado("Hannita :)")
-# se pueden modificar una propiedad privada
-print(empleado.__salario)
