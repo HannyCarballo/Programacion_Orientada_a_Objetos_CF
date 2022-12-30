@@ -23,17 +23,3 @@ class Empleado(User):
 
 empleado = Empleado("Hannita :)")
 empleado.saludar()
-
-class Pagina:
-    def imprimir_pie_pagina(self):
-        print(self.pie_pagina)
-
-class PaginaLegal(Pagina):
-    def imprimir_pie_pagina(self):
-        print("Derechos reservados")
-        super().imprimir_pie_pagina()
-
-html = PaginaLegal()
-html.pie_pagina="<p>Hola</p>"
-
-html.imprimir_pie_pagina()
