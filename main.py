@@ -17,7 +17,11 @@ class Empleado(User):
     def ver_salario(self):
         print(self.salario)
 
+    def saludar(self):
+        print("Mi nombre es "+self.nombre+" y ganó: "+str(self.salario))
+
 empleado = Empleado("Hannita :)")
-empleado.saludar("Hola! me llamo ")
 empleado.modificar_salario(1000)
 empleado.ver_salario()
+
+empleado.saludar()
