@@ -11,10 +11,10 @@ class Empleado(User):
     #propiedades unicamente de esta clase
     __salario = 0
 
-    def modificar_salario(self,salario):
+    def modificar_salario(self,salario): #setter
         self.__salario = salario
 
-    def ver_salario(self):
+    def ver_salario(self): #getter
         print(self.__salario)
 
     def saludar(self):
