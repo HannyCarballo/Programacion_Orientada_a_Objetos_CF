@@ -2,7 +2,7 @@
 class User:
     def __init__(self, nombre):
         # Método constructor
-        self.nombre=nombre
+        self._nombre=nombre
         
     def saludar(self, saludo):
         print(saludo+self.nombre)
@@ -19,7 +19,7 @@ class Empleado(User):
 
     def saludar(self):
         super().saludar("Hola!")
-        print("Mi nombre es "+self.nombre+" y gano: "+str(self.salario))
+        print("Mi nombre es "+self._nombre+" y gano: "+str(self.salario))
 
 empleado = Empleado("Hannita :)")
-empleado.saludar()
+print(empleado._nombre)
