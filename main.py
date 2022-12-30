@@ -18,10 +18,22 @@ class Empleado(User):
         print(self.salario)
 
     def saludar(self):
-        print("Mi nombre es "+self.nombre+" y ganó: "+str(self.salario))
+        super().saludar("Hola!")
+        print("Mi nombre es "+self.nombre+" y gano: "+str(self.salario))
 
 empleado = Empleado("Hannita :)")
-empleado.modificar_salario(1000)
-empleado.ver_salario()
-
 empleado.saludar()
+
+class Pagina:
+    def imprimir_pie_pagina(self):
+        print(self.pie_pagina)
+
+class PaginaLegal(Pagina):
+    def imprimir_pie_pagina(self):
+        print("Derechos reservados")
+        super().imprimir_pie_pagina()
+
+html = PaginaLegal()
+html.pie_pagina="<p>Hola</p>"
+
+html.imprimir_pie_pagina()
