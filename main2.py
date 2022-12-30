@@ -1,14 +1,18 @@
-class FilaBanco:
-    usuarios={}
+from abc import ABC, abstractmethod
 
-    def siguiente_usuario(self,numero):
-        # Implementacion
-        return self.obtener(numero)
+# clase abstracta
+class EstructuraAbstracta(ABC):
+    
+    @abstractmethod
+    def obtener():
+        pass
 
-    def formar_usuario(self,numero,usuario):
-        self.usuarios.agregar(numero,usuario)
+    @abstractmethod
+    def agregar():
+        pass
 
-class Hash():
+
+class Hash(EstructuraAbstracta):
     data = {}
  
     def obtener(self,key):
@@ -17,7 +21,7 @@ class Hash():
     def agregar(self,key,value):
         datos[llave]=valor
 
-class Queue:
+class Queue(EstructuraAbstracta):
     data = []
  
     def obtener(self):
@@ -25,3 +29,20 @@ class Queue:
  
     def agregar(self,key,value):
         datos[len(datos)-1]=valor
+
+
+class FilaBanco:
+    def __init__(self,almacen_usuarios):
+        if not isinstance(almacen_usuarios,EstructuraAbstracta):
+            raise ValueError("Store is not supported")
+
+        self.usuarios = almacen_usuarios
+
+    def siguiente_usuario(self,numero):
+        # Implementacion
+        return self.obtener(numero)
+
+    def formar_usuario(self,numero,usuario):
+        self.usuarios.agregar(numero,usuario)
+
+FilaBanco(Queue())
