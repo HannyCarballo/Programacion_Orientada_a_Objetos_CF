@@ -7,3 +7,10 @@ class FilaBanco:
 
     def formar_usuario(self,numero,usuario):
         usuarios[ticket] = usuario
+
+class Hash():
+    data = {}
+    def obtener(self,key):
+        data[key]
+    def agregar(self,key,value):
+        datos[llave]=valor
