@@ -9,4 +9,6 @@ class User:
         print(saludo+self.nombre)
 
 class Empleado(User):
-    
+    pass
+
+empleado = Empleado("Hannita :)")
