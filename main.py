@@ -12,3 +12,4 @@ class Empleado(User):
     pass
 
 empleado = Empleado("Hannita :)")
+empleado.saludar("Hola! me llamo ")
