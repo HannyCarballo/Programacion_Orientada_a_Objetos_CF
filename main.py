@@ -7,3 +7,6 @@ class User:
         
     def saludar(self, saludo):
         print(saludo+self.nombre)
+
+class Empleado(User):
+    
